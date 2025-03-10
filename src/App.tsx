@@ -1,35 +1,86 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ExperienceItem from "./components/ExperienceItem"
+import ProyectItem from "./components/ProyectItem"
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <main className="mx-auto w-[784px]">
+                <header className="flex justify-center items-center h-[300px]">
+                    <div className="flex flex-col gap-3">
+                        <h1 className="text-3xl font-bold">
+                            Javier Alejandro Zavala Torres
+                        </h1>
+                        <p>
+                            Ingeniero Civil Informático de la Universidad Técnica Federico Santa 
+                            María, con experiencia profesional inicial en desarrollo de software 
+                            en proyectos informáticos privados y públicos. Y machine learning 
+                            adquirida a través de sus prácticas y memoria. Profesional con alta 
+                            motivación y capacidad para aprender.                
+                        </p>
+                        <div className="flex justify-end gap-2">
+                            <a href="https://www.github.com/TortugaGris" target="_blank">Github</a>
+                            <a href="https://www.linkedin.com/in/jazavalat" target="_blank">Linkedin</a>
+                        </div>
+                    </div>
+                </header>
+                <section className="flex flex-col gap-2">
+                    <h2 className="text-2xl">
+                        Experiencia Laboral
+                    </h2>
+                    <ExperienceItem
+                        title = "Nir.by"
+                        date = "Oct 2022 - Ene 2024"
+                        jobTitle = "Desarrollador Fullstack" 
+                        location = "Remoto"
+                        descriptions = {[
+                            "Diseñé e implementé Vive Sano Prime, una aplicación web para acceder a material didáctico en el área de la salud, utilizando Angular, Firebase y Algolia.",
+                            "Integré un sistema de pagos para Vive Sano Prime, conectando plataformas como Stripe y Asaas, asegurando transacciones seguras y eficientes.",
+                            "Colaboré en el desarrollo de Nirby Primes, una aplicación web para la edición de videos interactivos, utilizando Angular, Firebase y MongoDB.",
+                        ]}
+                    />
+                    <ExperienceItem
+                        title = "Expermiento ATLAS (CERN)"
+                        date = "Ago 2020 - Ene 2022"
+                        jobTitle = "Data scientist (Tesis)" 
+                        location = "Remoto"
+                        descriptions = {[
+                            "Diseñé e implementé un algoritmo de redes neuronales profundas para la identificación de pares de partículas tau en el experimento ATLAS, utilizando Keras, Scikit-learn y Pandas, logrando resultados comparables a los métodos existentes.",
+                        ]}
+                    />
+                    <ExperienceItem
+                        title = "Observatorio Tololo (AURA)"
+                        date = "Ene 2019 - Mar 2019"
+                        jobTitle = "Desarrollador Fullstack (Práctica)" 
+                        location = "La Serena"
+                        descriptions = {[
+                            "Diseñé e implementé un algoritmo de redes neuronales profundas para la identificación de pares de partículas tau en el experimento ATLAS, utilizando Keras, Scikit-learn y Pandas, logrando resultados comparables a los métodos existentes.",
+                        ]}
+                    />
+                    <ExperienceItem
+                        title = "Ministerio de las Culturas, las Artes y el Patrimonio"
+                        date = "Abr 2019 - Ene 2020"
+                        jobTitle = "Desarrollador Fullstack (Feria de Software)	" 
+                        location = "Valparaíso"
+                        descriptions = {[
+                            "Participé en la planificación, toma de requisitos, diseño e implementación de una aplicación web para el registro de músicos de la Quinta Región, utilizando Vue.js, Django y PostgreSQL.",
+                        ]}
+                    />
+                </section>
+                <section className="my-5">
+                    <h2 className="text-2xl">
+                        Proyectos
+                    </h2>
+                    <ProyectItem
+                        title = "D&D Monster Dice Roller" 
+                        date = "Abr 2024" 
+                        descriptions = {[
+                            "Diseñé e implementé una aplicación web utilizando Angular que permite lanzar tiradas de salvación, habilidades y acciones de un monstruo aleatorio, así como realizar tiradas de dados personalizadas."
+                        ]}
+                    />
+                </section>
+            </main>
+        </>
+    )
 }
 
 export default App
