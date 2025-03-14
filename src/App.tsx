@@ -1,25 +1,39 @@
-import ExperienceItem from "./components/ExperienceItem"
-import ProyectItem from "./components/ProyectItem"
+import ExperienceItem from "./components/ExperienceItem";
+import ProyectItem from "./components/ProyectItem";
+import { MapPin, Github, Linkedin, GoogleDocs } from 'iconoir-react';
 
 function App() {
     return (
         <>
             <main className="mx-auto w-[784px]">
-                <header className="flex justify-center items-center h-[300px]">
+                <header className="flex items-center h-[300px]">
                     <div className="flex flex-col gap-3">
                         <h1 className="text-3xl font-bold">
                             Javier Alejandro Zavala Torres
                         </h1>
-                        <p>
-                            Ingeniero Civil Informático de la Universidad Técnica Federico Santa 
-                            María, con experiencia profesional inicial en desarrollo de software 
-                            en proyectos informáticos privados y públicos. Y machine learning 
-                            adquirida a través de sus prácticas y memoria. Profesional con alta 
-                            motivación y capacidad para aprender.                
-                        </p>
-                        <div className="flex justify-end gap-2">
-                            <a href="https://www.github.com/TortugaGris" target="_blank">Github</a>
-                            <a href="https://www.linkedin.com/in/jazavalat" target="_blank">Linkedin</a>
+                        <div className="flex items-center gap-3">
+                            <p className="text-2xl">Desarrollador Fullstack</p>
+                            <p className="flex gap-1 text-gray-600"><MapPin/> Valparaíso, Chile</p>
+                        </div>
+                        <div className="flex gap-1">
+                            <a className="border border-gray-900 px-2 py-1 rounded flex gap-2" 
+                                href="https://www.github.com/TortugaGris"
+                                target="_blank"
+                            >
+                                <GoogleDocs/> Curriculum
+                            </a>
+                            <a className="border border-gray-900 p-1 rounded" 
+                                href="https://www.github.com/TortugaGris"
+                                target="_blank"
+                            >
+                                <Github/>
+                            </a>
+                            <a className="border border-gray-900 p-1 rounded"
+                                href="https://www.linkedin.com/in/jazavalat" 
+                                target="_blank"
+                            >
+                                <Linkedin/>
+                            </a>
                         </div>
                     </div>
                 </header>
@@ -66,7 +80,7 @@ function App() {
                         ]}
                     />
                 </section>
-                <section className="my-5">
+                <section className="my-5 flex flex-col gap-2">
                     <h2 className="text-2xl">
                         Proyectos
                     </h2>

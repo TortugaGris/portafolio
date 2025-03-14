@@ -1,3 +1,5 @@
+import {MediaImage} from 'iconoir-react';
+
 interface ExperienceItemProps {
     title: string;
     date: string;
@@ -8,20 +10,15 @@ interface ExperienceItemProps {
 
 function ExperienceItem({title, date, jobTitle, location, descriptions}: ExperienceItemProps) {
     return (
-        <article className="flex flex-col gap-1">
-            <header className="flex justify-between">
-                <h3 className="text-xl">{title}</h3>
-                <span className="text-xl">{date}</span>
-            </header>
-            <div className="flex justify-between">
-                <h4>{jobTitle}</h4>
-                <span>{location}</span>
+        <article className="flex gap-2 border py-2 px-3 rounded">
+            <div className="flex items-center">
+                <MediaImage className="border rounded-full p-1"/>
             </div>
-            <ul className="list-disc ml-4">
-                {descriptions.map(description => (
-                    <li>{description}</li>
-                ))}
-            </ul>
+            <div>
+                <span className="text-sm">{date}</span>
+                <h3 className="text-xl">{title}</h3>
+                <h4>{jobTitle}</h4>
+            </div>
         </article>
     ) 
 }
