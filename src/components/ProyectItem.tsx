@@ -6,7 +6,7 @@ interface ProyectItemProps {
 
 function ProyectItem({title, date, descriptions}: ProyectItemProps) {
     return (
-        <article className="flex flex-col border py-2 px-3 rounded">
+        <article className="flex flex-col border border-gray-300 py-2 px-3 rounded">
             <span className="text-sm">{date}</span>
             <h3 className="text-xl">{title}</h3>
             <ul className="list-disc ml-4">
